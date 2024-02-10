@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #4d774e;
+}
+
+/* Formulaire */
+.form-error {
+  height: 1.5em;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  color: #ff0000;
+}
+
+.auth-box {
+  width: 400px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.auth-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auth-form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #efefef;
+  }
+}
+
+.auth-button {
+  height: 54px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #fb771a;
+  border-color: #fb771a;
+  border-style: none;
+  border-radius: 4px;
+}
+
+.auth-button:not(:disabled) {
+  cursor: pointer;
+}
