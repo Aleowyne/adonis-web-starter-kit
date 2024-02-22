@@ -21,47 +21,13 @@ body {
   color: #ff0000;
 }
 
-.auth-box {
-  width: 400px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.auth-title {
+.form-title {
   margin-bottom: 30px;
   text-align: center;
 }
 
-.auth-form-group {
-  display: flex;
-  flex-direction: column;
-
-  label {
-    margin-bottom: 5px;
-  }
-
-  input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background: #efefef;
-  }
-}
-
-.auth-button {
-  height: 54px;
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #fb771a;
-  border-color: #fb771a;
-  border-style: none;
-  border-radius: 4px;
-}
-
-.auth-button:not(:disabled) {
-  cursor: pointer;
+.auth-box {
+  width: 400px;
+  padding: 40px;
+  background-color: #ffffff;
 }

@@ -3,13 +3,7 @@ import { loginUserValidator } from '#validators/user'
 import User from '#models/user'
 
 export default class LoginController {
-  async index({ response, auth, inertia }: HttpContext) {
-    let isConnected = await auth.use('web').check()
-
-    if (isConnected) {
-      return response.redirect('/')
-    }
-
+  async index({ inertia }: HttpContext) {
     return inertia.render('auth/login')
   }
 

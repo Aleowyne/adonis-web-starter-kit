@@ -39,34 +39,33 @@
     "@japa/assert": "^2.1.0",
     "@japa/plugin-adonisjs": "^3.0.0",
     "@japa/runner": "^3.1.1",
-    "@swc/core": "^1.4.0",
+    "@swc/core": "^1.4.2",
     "@types/luxon": "^3.4.2",
-    "@types/node": "^20.11.16",
-    "@vitejs/plugin-vue": "^5.0.3",
+    "@types/node": "^20.11.20",
+    "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^8.56.0",
     "pino-pretty": "^10.3.1",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "vite": "^5.1.4"
   },
   "dependencies": {
     "@adonisjs/auth": "^9.1.1",
     "@adonisjs/core": "^6.2.3",
     "@adonisjs/inertia": "^1.0.0-7",
-    "@adonisjs/lucid": "^20.1.0",
+    "@adonisjs/lucid": "^20.2.0",
     "@adonisjs/session": "^7.1.1",
     "@adonisjs/shield": "^8.1.1",
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^2.0.2",
     "@inertiajs/vue3": "^1.0.14",
     "@vinejs/vine": "^1.7.1",
-    "@vueform/multiselect": "^2.6.6",
     "edge.js": "^6.0.1",
     "luxon": "^3.4.4",
     "mysql2": "^3.9.1",
     "reflect-metadata": "^0.2.1",
-    "vue": "^3.4.15"
+    "vue": "^3.4.19"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"

@@ -1,48 +1,51 @@
 <template>
-  <Layout :message="props.message" :isAuthenticated="false">
+  <Layout>
     <div class="auth-box">
-      <div class="auth-title">
+      <div class="form-title">
         <h3>Inscription</h3>
       </div>
       <form @submit.prevent="form.post('/signin')">
-        <div class="auth-form-group">
-          <label for="email">Adresse mail</label>
-          <input type="text" id="email" v-model="form.email" />
-          <div class="form-error">
-            <p v-if="form.errors.email">{{ form.errors.email[0] }}</p>
-          </div>
-        </div>
-        <div class="auth-form-group">
-          <label for="username">Nom d'utilisateur</label>
-          <input type="text" id="username" v-model="form.username" />
-          <div class="form-error">
-            <p v-if="form.errors.username">{{ form.errors.username[0] }}</p>
-          </div>
-        </div>
-        <div class="auth-form-group">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" v-model="form.password" />
-          <div class="form-error">
-            <p v-if="form.errors.password">{{ form.errors.password[0] }}</p>
-          </div>
-        </div>
-        <button type="submit" class="auth-button">S'inscrire</button>
+        <InputGroup
+          type="email"
+          name="email"
+          label="Adresse mail"
+          v-model="form.email"
+          :errors="form.errors.email"
+        />
+        <InputGroup
+          type="text"
+          name="username"
+          label="Nom d'utilisateur"
+          v-model="form.username"
+          :errors="form.errors.username"
+        />
+        <InputGroup
+          type="password"
+          name="password"
+          label="Mot de passe"
+          v-model="form.password"
+          :errors="form.errors.password"
+        />
+        <Button label="S'inscrire" />
       </form>
     </div>
   </Layout>
 </template>
 
 <script setup lang="ts">
-import { useForm } from '@inertiajs/vue3'
-import type { UserForm, Message } from '@/types'
+import { computed } from 'vue'
+import { useForm, usePage } from '@inertiajs/vue3'
+import type { UserForm, InertiaProps } from '@/types'
 import Layout from '@/layouts/default.vue'
+import InputGroup from '@/components/form/input_group.vue'
+import Button from '@/components/form/button.vue'
 
-const props = defineProps<Message>()
+const csrfToken = computed(() => usePage<InertiaProps>().props.csrfToken)
 
 const form = useForm<UserForm>({
   email: '',
   username: '',
   password: '',
-  _csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+  _csrf: csrfToken.value,
 })
 </script>

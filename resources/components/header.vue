@@ -4,22 +4,22 @@
       <Link class="header-navbar-link" href="/">Projet</Link>
     </div>
     <ul class="header-navbar-right">
-      <li class="header-navbar-item" v-if="props.isAuthenticated">
+      <li class="header-navbar-item" v-if="isAuth">
         <Link class="header-navbar-link" href="/menu1">Menu 1</Link>
       </li>
-      <li class="header-navbar-item" v-if="props.isAuthenticated">
+      <li class="header-navbar-item" v-if="isAuth">
         <Link class="header-navbar-link" href="/menu2">Menu 2</Link>
       </li>
-      <li class="header-navbar-item" v-if="props.isAuthenticated">
+      <li class="header-navbar-item" v-if="isAuth">
         <Link class="header-navbar-link" href="/menu3">Menu 3</Link>
       </li>
-      <li class="header-navbar-item" v-if="props.isAuthenticated">
+      <li class="header-navbar-item" v-if="isAuth">
         <Link class="header-navbar-link" href="/logout">Déconnexion</Link>
       </li>
-      <li class="header-navbar-item" v-if="!props.isAuthenticated">
+      <li class="header-navbar-item" v-if="!isAuth">
         <Link class="header-navbar-link" href="/login">Connexion</Link>
       </li>
-      <li class="header-navbar-item" v-if="!props.isAuthenticated">
+      <li class="header-navbar-item" v-if="!isAuth">
         <Link class="header-navbar-link" href="/signin">Inscription</Link>
       </li>
     </ul>
@@ -27,10 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Auth } from '@/types'
-import { Link } from '@inertiajs/vue3'
+import { computed } from 'vue'
+import { Link, usePage } from '@inertiajs/vue3'
+import type { InertiaProps } from '@/types'
 
-const props = defineProps<Auth>()
+const isAuth = computed(() => usePage<InertiaProps>().props.isAuth)
 </script>
 
 <style scoped>

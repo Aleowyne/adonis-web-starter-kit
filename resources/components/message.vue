@@ -1,22 +1,23 @@
 <template>
   <div class="alert" :class="classTypeAlert" v-if="isVisibleMsg">
-    {{ props.message.content }}
+    {{ page.props.message.content }}
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Message } from '@/types'
 import { ref, watch } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+import type { InertiaProps } from '@/types'
 
-const props = defineProps<Message>()
+const page = usePage<InertiaProps>()
 const isVisibleMsg = ref(false)
 const classTypeAlert = ref('')
 
 watch(
-  () => props.message,
+  () => page.props,
   (newValue) => {
-    if (newValue) {
-      classTypeAlert.value = `alert-${newValue.type}`
+    if (newValue.message) {
+      classTypeAlert.value = `alert-${newValue.message.type}`
       isVisibleMsg.value = true
 
       setTimeout(() => {

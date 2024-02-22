@@ -1,11 +1,12 @@
-export type Message = {
+import type { Errors, ErrorBag } from '@inertiajs/core'
+
+export type InertiaProps = {
+  errors?: Errors & ErrorBag
   message?: {
     type: string
     content: string
   }
-}
-
-export type Auth = {
+  csrfToken: string
   isAuthenticated: boolean
 }
 

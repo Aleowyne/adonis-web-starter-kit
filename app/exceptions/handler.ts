@@ -36,7 +36,7 @@ export default class HttpExceptionHandler extends ExceptionHandler {
    */
   async handle(error: unknown, ctx: HttpContext) {
     if (error instanceof errors.E_INVALID_CREDENTIALS) {
-      ctx.session.flash('message', { message: { type: 'error', content: 'Erreur à la connexion' } })
+      ctx.session.flash('message', { type: 'error', content: 'Erreur à la connexion' })
       return ctx.response.redirect().back()
     }
 
