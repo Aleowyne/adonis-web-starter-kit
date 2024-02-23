@@ -7,7 +7,7 @@ export type InertiaProps = {
     content: string
   }
   csrfToken: string
-  isAuthenticated: boolean
+  isAuth: boolean
 }
 
 export type UserForm = {

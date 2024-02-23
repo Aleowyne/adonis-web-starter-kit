@@ -13,14 +13,6 @@ body {
   background-color: #4d774e;
 }
 
-/* Formulaire */
-.form-error {
-  height: 1.5em;
-  margin-bottom: 20px;
-  font-size: 0.8em;
-  color: #ff0000;
-}
-
 .form-title {
   margin-bottom: 30px;
   text-align: center;

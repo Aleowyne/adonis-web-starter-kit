@@ -11,3 +11,12 @@ interface ErrorProps {
 
 defineProps<ErrorProps>()
 </script>
+
+<style scoped>
+.form-error {
+  height: 1.5em;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  color: #ff0000;
+}
+</style>
