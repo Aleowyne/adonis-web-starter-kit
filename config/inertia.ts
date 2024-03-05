@@ -12,7 +12,6 @@ export default defineConfig({
   sharedData: {
     errors: (ctx) => ctx.session.flashMessages.get('errors'),
     message: (ctx) => ctx.session.flashMessages.get('message'),
-    csrfToken: (ctx) => ctx.request.csrfToken,
     isAuth: (ctx) => ctx.auth.isAuthenticated,
   },
 })

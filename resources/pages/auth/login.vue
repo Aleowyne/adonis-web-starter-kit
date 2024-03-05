@@ -26,19 +26,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useForm, usePage } from '@inertiajs/vue3'
-import type { UserForm, InertiaProps } from '@/types'
+import { useForm } from '@inertiajs/vue3'
+import type { UserForm } from '@/types'
 import Layout from '@/layouts/default.vue'
 import InputGroup from '@/components/form/input_group.vue'
 import Button from '@/components/form/button.vue'
-
-const csrfToken = computed(() => usePage<InertiaProps>().props.csrfToken)
 
 const form = useForm<UserForm>({
   email: '',
   username: '',
   password: '',
-  _csrf: csrfToken.value,
 })
 </script>

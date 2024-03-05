@@ -6,7 +6,6 @@ export type InertiaProps = {
     type: string
     content: string
   }
-  csrfToken: string
   isAuth: boolean
 }
 
@@ -14,5 +13,4 @@ export type UserForm = {
   email: string
   username: string
   password: string
-  _csrf: string
 }
