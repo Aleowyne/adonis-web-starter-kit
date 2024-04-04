@@ -37,6 +37,7 @@ export default defineConfig({
     () => import('@adonisjs/lucid/database_provider'),
     () => import('@adonisjs/auth/auth_provider'),
     () => import('@adonisjs/inertia/inertia_provider'),
+    () => import('@adonisjs/cors/cors_provider'),
   ],
 
   /*
@@ -87,4 +88,9 @@ export default defineConfig({
       reloadServer: false,
     },
   ],
+
+  assetsBundler: false,
+  unstable_assembler: {
+    onBuildStarting: [() => import('@adonisjs/vite/build_hook')],
+  },
 })

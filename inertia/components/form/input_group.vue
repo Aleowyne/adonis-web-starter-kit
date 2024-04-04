@@ -16,7 +16,7 @@ interface InputGroupProps {
   name: string
   label: string
   placeholder?: string
-  errors?: Array<string>
+  errors?: any
 }
 
 defineProps<InputGroupProps>()

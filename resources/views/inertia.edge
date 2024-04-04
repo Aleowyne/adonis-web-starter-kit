@@ -8,7 +8,8 @@
   <link rel="icon" href="/icons/favicon.ico" type="image/x-icon">
   <title>Project</title>
 
-  @vite(['resources/app.ts'])
+  @vite(['inertia/app/app.ts', `inertia/pages/${page.component}.vue`])
+  @inertiaHead()
 </head>
 
 <body>
