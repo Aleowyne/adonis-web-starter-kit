@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "typecheck:adonis": "tsc --noEmit -p tsconfig.json",
     "typecheck:vue": "vue-tsc --noEmit -p inertia/tsconfig.json",
-    "typecheck": "pnpm typecheck:adonis && pnpm typecheck:vue"
+    "typecheck": "npm run typecheck:adonis && npm run typecheck:vue"
   },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
@@ -68,7 +68,8 @@
     "luxon": "^3.4.4",
     "mysql2": "^3.9.3",
     "reflect-metadata": "^0.2.2",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-tsc": "^2.0.10"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"

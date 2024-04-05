@@ -5,8 +5,20 @@
         <h3>Connexion</h3>
       </div>
       <form @submit.prevent="form.post('/login')">
-        <InputGroup type="email" name="email" label="Adresse mail" v-model="form.email" :errors="form.errors.email" />
-        <InputGroup type="password" name="password" label="Mot de passe" v-model="form.password" :errors="form.errors.password" />
+        <InputGroup
+          type="email"
+          name="email"
+          label="Adresse mail"
+          v-model="form.email"
+          :errors="form.errors.email"
+        />
+        <InputGroup
+          type="password"
+          name="password"
+          label="Mot de passe"
+          v-model="form.password"
+          :errors="form.errors.password"
+        />
         <Button label="Se connecter" />
       </form>
     </div>
