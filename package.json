@@ -41,22 +41,22 @@
     "@japa/assert": "^3.0.0",
     "@japa/plugin-adonisjs": "^3.0.1",
     "@japa/runner": "^3.1.2",
-    "@swc/core": "^1.4.11",
+    "@swc/core": "^1.4.13",
     "@types/luxon": "^3.4.2",
-    "@types/node": "^20.12.4",
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "pino-pretty": "^11.0.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.5",
     "vite": "^5.2.8"
   },
   "dependencies": {
     "@adonisjs/auth": "^9.2.0",
     "@adonisjs/core": "^6.5.0",
     "@adonisjs/cors": "^2.2.1",
-    "@adonisjs/inertia": "^1.0.0-24",
+    "@adonisjs/inertia": "^1.0.0-25",
     "@adonisjs/lucid": "^20.5.1",
     "@adonisjs/session": "^7.3.0",
     "@adonisjs/shield": "^8.1.1",
@@ -66,10 +66,10 @@
     "@vinejs/vine": "^1.8.0",
     "edge.js": "^6.0.2",
     "luxon": "^3.4.4",
-    "mysql2": "^3.9.3",
+    "mysql2": "^3.9.4",
     "reflect-metadata": "^0.2.2",
     "vue": "^3.4.21",
-    "vue-tsc": "^2.0.10"
+    "vue-tsc": "^2.0.13"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
