@@ -9,13 +9,14 @@ export default class SigninController {
 
   async store({ request, response, session }: HttpContext) {
     const payload = await request.validateUsing(createUserValidator)
-    const searchPayload = { email: payload.email }
-    const user = await User.firstOrCreate(searchPayload, payload)
+    const user = await User.findBy('email', payload.email)
 
-    if (!user.$isLocal) {
+    if (user) {
       session.flash('message', { type: 'error', content: "Erreur à l'inscription" })
       return response.redirect().back()
     }
+
+    await User.create(payload)
 
     return response.redirect('/login')
   }

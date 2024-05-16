@@ -1,6 +1,6 @@
 <template>
   <div class="form-error">
-    <p v-if="errors">{{ errors[0] }}</p>
+    <p v-if="errors && errors.length > 0">{{ errors[0] }}</p>
   </div>
 </template>
 
