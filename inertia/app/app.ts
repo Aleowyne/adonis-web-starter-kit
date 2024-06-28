@@ -1,3 +1,6 @@
+/// <reference path="../../adonisrc.ts" />
+/// <reference path="../../config/inertia.ts" />
+/// <reference path="../../config/auth.ts" />
 import '../css/app.css'
 import { createApp, h } from 'vue'
 import type { DefineComponent } from 'vue'
