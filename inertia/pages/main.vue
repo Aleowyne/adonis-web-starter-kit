@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import Layout from '@/layouts/default.vue'
+  import Layout from '@/layouts/default.vue'
 
-const props = defineProps<{ title: string }>()
+  const props = defineProps<{ title: string }>()
 </script>

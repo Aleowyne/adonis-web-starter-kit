@@ -1,22 +1,24 @@
 <template>
   <div class="form-error">
-    <p v-if="errors && errors.length > 0">{{ errors[0] }}</p>
+    <p v-if="error">
+      {{ error }}
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-interface ErrorProps {
-  errors?: Array<string>
-}
+  interface ErrorProps {
+    error?: string
+  }
 
-defineProps<ErrorProps>()
+  defineProps<ErrorProps>()
 </script>
 
 <style scoped>
-.form-error {
-  height: 1.5em;
-  margin-bottom: 20px;
-  font-size: 0.8em;
-  color: #ff0000;
-}
+  .form-error {
+    height: 2em;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: #ff0000;
+  }
 </style>

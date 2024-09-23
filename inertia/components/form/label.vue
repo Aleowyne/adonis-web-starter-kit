@@ -1,18 +1,20 @@
 <template>
-  <label :for="name">{{ label }}</label>
+  <label :for="name">
+    {{ label }}
+  </label>
 </template>
 
 <script setup lang="ts">
-interface LabelProps {
-  name: string
-  label: string
-}
+  interface LabelProps {
+    name: string
+    label: string
+  }
 
-defineProps<LabelProps>()
+  defineProps<LabelProps>()
 </script>
 
 <style scoped>
-label {
-  margin-bottom: 5px;
-}
+  label {
+    margin-bottom: 0.5em;
+  }
 </style>

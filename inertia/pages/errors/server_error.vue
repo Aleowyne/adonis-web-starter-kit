@@ -1,5 +1,9 @@
 <script setup lang="ts">
-defineProps<{ error: any }>()
+  interface ErrorProps {
+    error: { message: string }
+  }
+
+  defineProps<ErrorProps>()
 </script>
 
 <template>
