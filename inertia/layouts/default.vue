@@ -15,10 +15,17 @@
 
 <style scoped>
   .content {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    &:has(.auth-box) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:not(:has(.auth-box)) {
+      margin-top: 50px;
+    }
   }
 </style>

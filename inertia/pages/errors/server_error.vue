@@ -1,15 +1,13 @@
-<script setup lang="ts">
-  interface ErrorProps {
-    error: { message: string }
-  }
-
-  defineProps<ErrorProps>()
-</script>
-
 <template>
   <div>
     <div>Server Error</div>
 
-    <span>{{ error.message }}</span>
+    <span>{{ props.error.message }}</span>
   </div>
 </template>
+
+<script setup lang="ts">
+  const props = defineProps<{
+    error: { message: string }
+  }>()
+</script>

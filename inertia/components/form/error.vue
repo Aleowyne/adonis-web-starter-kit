@@ -1,17 +1,15 @@
 <template>
   <div class="form-error">
-    <p v-if="error">
-      {{ error }}
+    <p v-if="props.error">
+      {{ props.error }}
     </p>
   </div>
 </template>
 
 <script setup lang="ts">
-  interface ErrorProps {
+  const props = defineProps<{
     error?: string
-  }
-
-  defineProps<ErrorProps>()
+  }>()
 </script>
 
 <style scoped>
