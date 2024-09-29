@@ -19,12 +19,12 @@ main {
 }
 
 .form-title {
-  margin-bottom: 30px;
+  margin-bottom: 2em;
   text-align: center;
 }
 
 .auth-box {
   width: 400px;
-  padding: 40px;
+  padding: 3em;
   background-color: #ffffff;
 }

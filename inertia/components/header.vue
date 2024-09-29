@@ -38,14 +38,14 @@
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 50px;
+    height: 3em;
     background-color: #164a41;
   }
 
   .header-navbar-left {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 1em;
   }
 
   .header-navbar-right {
@@ -55,7 +55,7 @@
   }
 
   .header-navbar-item {
-    padding: 0px 20px;
+    padding: 0em 1em;
     list-style: none;
   }
 

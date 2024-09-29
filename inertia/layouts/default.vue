@@ -25,7 +25,7 @@
     }
 
     &:not(:has(.auth-box)) {
-      margin-top: 50px;
+      margin: 2em 0em;
     }
   }
 </style>
