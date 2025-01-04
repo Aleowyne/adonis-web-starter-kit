@@ -4,6 +4,8 @@ import { getDirname } from '@poppinss/utils'
 import inertia from '@adonisjs/inertia/client'
 import vue from '@vitejs/plugin-vue'
 import adonisjs from '@adonisjs/vite/client'
+import tailwind from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
   plugins: [
@@ -26,6 +28,11 @@ export default defineConfig({
       reload: ['resources/views/**/*.edge'],
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwind(), autoprefixer()],
+    },
+  },
   resolve: {
     alias: {
       '@/': `${resolve(getDirname(import.meta.url), 'inertia')}/`,

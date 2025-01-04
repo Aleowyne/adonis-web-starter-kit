@@ -1,30 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
+@layer base {
+  :root {
+    --background: 115 35% 98%;
+    --foreground: 0 0% 0%;
+    --muted: 116 10% 85%;
+    --muted-foreground: 116 14% 28%;
+    --popover: 116 35% 99%;
+    --popover-foreground: 116 62% 1%;
+    --card: 116 35% 95%;
+    --card-foreground: 116 62% 0%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --primary: 116 21% 65%;
+    --primary-foreground: 116 21% 13%;
+    --secondary: 116 9% 80%;
+    --secondary-foreground: 116 9% 20%;
+    --accent: 116 18% 72%;
+    --accent-foreground: 116 18% 12%;
+    --destructive: 3 90% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 116 21% 73%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 116 52% 3%;
+    --foreground: 116 39% 98%;
+    --muted: 116 10% 15%;
+    --muted-foreground: 116 14% 72%;
+    --popover: 116 52% 3%;
+    --popover-foreground: 116 39% 98%;
+    --card: 116 52% 4%;
+    --card-foreground: 116 39% 99%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --primary: 116 21% 73%;
+    --primary-foreground: 116 21% 13%;
+    --secondary: 116 3% 19%;
+    --secondary-foreground: 116 3% 79%;
+    --accent: 116 11% 24%;
+    --accent-foreground: 116 11% 84%;
+    --destructive: 3 90% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 116 21% 73%;
+  }
 }
 
-html,
-body {
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  background-color: #4d774e;
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+  html {
+    @apply h-full;
+  }
 
-.form-title {
-  margin-bottom: 2em;
-  text-align: center;
-}
-
-.auth-box {
-  width: 400px;
-  padding: 3em;
-  background-color: #ffffff;
+  body {
+    @apply h-full;
+    @apply bg-background text-foreground;
+  }
 }

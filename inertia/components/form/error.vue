@@ -1,5 +1,5 @@
 <template>
-  <div class="form-error">
+  <div class="h-4 text-xs mb-5 text-red-600 dark:text-red-500">
     <p v-if="props.error">
       {{ props.error }}
     </p>
@@ -11,12 +11,3 @@
     error?: string
   }>()
 </script>
-
-<style scoped>
-  .form-error {
-    height: 2em;
-    margin-top: 0.5em;
-    font-size: 0.8em;
-    color: #ff0000;
-  }
-</style>

@@ -3,6 +3,9 @@ import pluginVue from 'eslint-plugin-vue'
 import tsEslint from 'typescript-eslint'
 
 export default configApp(
+  {
+    ignores: ['inertia/components/ui/**'],
+  },
   ...tsEslint.configs.recommended,
   {
     rules: {
@@ -21,6 +24,7 @@ export default configApp(
     rules: {
       'vue/multi-word-component-names': 'off',
       'vue/max-attributes-per-line': 'off',
+      'vue/singleline-html-element-content-newline': 'off',
       'vue/html-self-closing': [
         'error',
         {
@@ -31,14 +35,6 @@ export default configApp(
           },
           svg: 'always',
           math: 'always',
-        },
-      ],
-      'vue/singleline-html-element-content-newline': [
-        'error',
-        {
-          ignoreWhenNoAttributes: true,
-          ignoreWhenEmpty: true,
-          ignores: ['Link'],
         },
       ],
     },
