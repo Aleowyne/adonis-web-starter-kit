@@ -1,10 +1,6 @@
 <script setup lang="ts">
-  import {
-    NavigationMenuLink,
-    type NavigationMenuLinkEmits,
-    type NavigationMenuLinkProps,
-    useForwardPropsEmits,
-  } from 'radix-vue'
+  import type { NavigationMenuLinkEmits, NavigationMenuLinkProps } from 'reka-ui'
+  import { NavigationMenuLink, useForwardPropsEmits } from 'reka-ui'
 
   const props = defineProps<NavigationMenuLinkProps>()
   const emits = defineEmits<NavigationMenuLinkEmits>()

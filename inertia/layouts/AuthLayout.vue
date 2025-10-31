@@ -18,16 +18,10 @@
         <NavigationMenu class="mr-7">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/menu1" class="bg-card" :class="navigationMenuTriggerStyle()"> Menu 1 </Link>
+              <Link href="/login" class="bg-card" :class="navigationMenuTriggerStyle()"> Connexion </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/menu2" class="bg-card" :class="navigationMenuTriggerStyle()"> Menu 2 </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/menu3" class="bg-card" :class="navigationMenuTriggerStyle()"> Menu 3 </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/logout" class="bg-card" :class="navigationMenuTriggerStyle()"> Déconnexion </Link>
+              <Link href="/signin" class="bg-card" :class="navigationMenuTriggerStyle()"> Inscription </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -52,6 +46,7 @@
   import { Toaster } from '@/components/ui/sonner'
   import { toast } from 'vue-sonner'
   import { SharedProps } from '@adonisjs/inertia/types'
+  import 'vue-sonner/style.css'
 
   const page = usePage<SharedProps>()
 

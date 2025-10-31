@@ -1,8 +1,8 @@
 <template>
-  <div class="form-group">
+  <div class="grid w-full items-center gap-1.5">
     <Label :for="props.name">{{ props.label }}</Label>
     <Select :id="props.name" v-model="model">
-      <SelectTrigger>
+      <SelectTrigger class="w-full bg-background">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
@@ -21,14 +21,7 @@
   import { OptionForm } from '@/types'
   import Error from '@/components/form/Error.vue'
   import { Label } from '@/components/ui/label'
-  import {
-    Select,
-    SelectTrigger,
-    SelectValue,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-  } from '@/components/ui/select'
+  import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectItem } from '@/components/ui/select'
 
   const props = defineProps<{
     name: string

@@ -9,6 +9,7 @@
       :disabled="props.disabled"
       :min="props.type === 'number' && props.min"
       :max="props.type === 'number' && props.max"
+      class="bg-background"
     />
     <Error :error="props.error" />
   </div>

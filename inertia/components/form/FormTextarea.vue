@@ -7,6 +7,7 @@
       :placeholder="props.placeholder"
       :disabled="props.disabled"
       rows="8"
+      class="bg-background"
     />
     <Error :error="props.error" />
   </div>
