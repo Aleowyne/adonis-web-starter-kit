@@ -1,6 +1,6 @@
 <template>
-  <div class="grid w-full items-center gap-1.5">
-    <Label :for="props.name">{{ props.label }}</Label>
+  <Field :data-invalid="!!props.error">
+    <FieldLabel :for="props.name">{{ props.label }}</FieldLabel>
     <Select :id="props.name" v-model="model">
       <SelectTrigger class="w-full bg-background">
         <SelectValue />
@@ -13,15 +13,14 @@
         </SelectGroup>
       </SelectContent>
     </Select>
-    <Error class="mt-1" :error="props.error" />
-  </div>
+    <FieldError :errors="[{ message: props.error }]" class="text-xs" />
+  </Field>
 </template>
 
 <script setup lang="ts">
   import { OptionForm } from '@/types'
-  import Error from '@/components/form/Error.vue'
-  import { Label } from '@/components/ui/label'
   import { Select, SelectTrigger, SelectValue, SelectContent, SelectGroup, SelectItem } from '@/components/ui/select'
+  import { Field, FieldLabel, FieldError } from '@/components/ui/field'
 
   const props = defineProps<{
     name: string

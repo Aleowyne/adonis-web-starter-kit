@@ -1,6 +1,6 @@
 <template>
-  <div class="grid w-full items-center gap-1.5">
-    <Label :for="props.name">{{ props.label }}</Label>
+  <Field :data-invalid="!!props.error">
+    <FieldLabel :for="props.name">{{ props.label }}</FieldLabel>
     <Input
       :id="props.name"
       v-model="model"
@@ -9,16 +9,16 @@
       :disabled="props.disabled"
       :min="props.type === 'number' && props.min"
       :max="props.type === 'number' && props.max"
+      :aria-invalid="!!props.error"
       class="bg-background"
     />
-    <Error :error="props.error" />
-  </div>
+    <FieldError :errors="[{ message: props.error }]" class="text-xs" />
+  </Field>
 </template>
 
 <script setup lang="ts">
-  import Error from '@/components/form/Error.vue'
-  import { Label } from '@/components/ui/label'
   import { Input } from '@/components/ui/input'
+  import { Field, FieldLabel, FieldError } from '@/components/ui/field'
 
   const props = defineProps<{
     type: string

@@ -1,26 +1,26 @@
 <template>
-  <div class="grid w-full items-center gap-1.5">
-    <Label :for="props.name">{{ props.label }}</Label>
+  <Field :data-invalid="!!props.error">
+    <FieldLabel :htmlFor="props.name">{{ props.label }}</FieldLabel>
     <Textarea
+      :id="props.name"
       v-model="model"
-      :name="props.name"
       :placeholder="props.placeholder"
       :disabled="props.disabled"
-      rows="8"
+      :rows="props.rows"
       class="bg-background"
     />
-    <Error :error="props.error" />
-  </div>
+    <FieldError :errors="[{ message: props.error }]" class="text-xs" />
+  </Field>
 </template>
 
 <script setup lang="ts">
-  import Error from '@/components/form/Error.vue'
-  import { Label } from '@/components/ui/label'
   import { Textarea } from '@/components/ui/textarea'
+  import { Field, FieldLabel, FieldError } from '@/components/ui/field'
 
   const props = defineProps<{
     name: string
     label: string
+    rows?: number
     placeholder?: string
     disabled?: boolean
     error?: string

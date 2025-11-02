@@ -8,21 +8,25 @@
         <CardTitle>Inscription</CardTitle>
       </CardHeader>
       <CardContent>
-        <FormInput v-model="form.email" type="email" name="email" label="Adresse mail" :error="form.errors.email" />
-        <FormInput
-          v-model="form.username"
-          type="text"
-          name="username"
-          label="Nom d'utilisateur"
-          :error="form.errors.username"
-        />
-        <FormInput
-          v-model="form.password"
-          type="password"
-          name="password"
-          label="Mot de passe"
-          :error="form.errors.password"
-        />
+        <FieldSet>
+          <FieldGroup>
+            <FormInput v-model="form.email" type="email" name="email" label="Adresse mail" :error="form.errors.email" />
+            <FormInput
+              v-model="form.username"
+              type="text"
+              name="username"
+              label="Nom d'utilisateur"
+              :error="form.errors.username"
+            />
+            <FormInput
+              v-model="form.password"
+              type="password"
+              name="password"
+              label="Mot de passe"
+              :error="form.errors.password"
+            />
+          </FieldGroup>
+        </FieldSet>
       </CardContent>
       <CardFooter class="flex justify-center">
         <Button class="w-full">S'inscrire</Button>
@@ -36,6 +40,7 @@
   import type { UserForm } from '@/types'
   import AuthLayout from '@/layouts/AuthLayout.vue'
   import FormInput from '@/components/form/FormInput.vue'
+  import { FieldSet, FieldGroup } from '@/components/ui/field'
   import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card'
   import { Button } from '@/components/ui/button'
 
